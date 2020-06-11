@@ -1,0 +1,53 @@
+{
+	"name": "sma-code-extractor",
+	"displayName": "SMACodeExtractor",
+	"description": "Extract snippets of code from VSCode into SuperMemo",
+	"version": "0.0.1",
+	"publisher": "Jamesb",
+	"repository": "TODO",
+	"engines": {
+		"vscode": "^1.34.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.extract"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"keybindings": {
+			"command": "extension.extract",
+			"key": "alt+x",
+			"when": "editorTextFocus"
+		},
+		"commands": [
+			{
+				"command": "extension.extract",
+				"title": "Hello World"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint . --ext .ts,.tsx",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "install-app-deps"
+	},
+	"devDependencies": {
+		"@types/node": "^12.12.0",
+		"@types/vscode": "^1.34.0",
+		"@typescript-eslint/eslint-plugin": "^3.0.2",
+		"@typescript-eslint/parser": "^3.0.2",
+		"electron-builder": "^22.7.0",
+		"electron-rebuild": "^1.11.0",
+		"eslint": "^7.1.0",
+		"typescript": "^3.9.4"
+	},
+	"dependencies": {
+		"sqlite3": "https://github.com/mapbox/node-sqlite3/tarball/master",
+		"typeorm": "^0.2.25",
+		"vsce": "^1.75.0"
+	}
+}
